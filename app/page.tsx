@@ -13,8 +13,8 @@ export default function Home() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">About Me</h2>
           <p className="leading-relaxed">
-            I'm a 21-year-old Information Science Engineering student at RVITM, Bangalore (2021-25). 
-            Currently, I'm pursuing my passion in IT as a Desk Support Intern at Pluralsight, where I started my journey in January 2025.
+            I&apos;m a 21-year-old Information Science Engineering student at RVITM, Bangalore (2021-25). 
+            Currently, I&apos;m pursuing my passion in IT as a Desk Support Intern at Pluralsight, where I started my journey in January 2025.
           </p>
         </section>
 
