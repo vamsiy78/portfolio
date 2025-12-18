@@ -40,21 +40,19 @@ function Particles({ count = 2000 }) {
     mesh.current.geometry.attributes.position.needsUpdate = true
   })
 
+  const positionAttribute = useMemo(() => {
+    return new THREE.BufferAttribute(particles.positions, 3)
+  }, [particles.positions])
+
+  const colorAttribute = useMemo(() => {
+    return new THREE.BufferAttribute(particles.colors, 3)
+  }, [particles.colors])
+
   return (
     <points ref={mesh}>
       <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={count}
-          array={particles.positions}
-          itemSize={3}
-        />
-        <bufferAttribute
-          attach="attributes-color"
-          count={count}
-          array={particles.colors}
-          itemSize={3}
-        />
+        <primitive object={positionAttribute} attach="attributes-position" />
+        <primitive object={colorAttribute} attach="attributes-color" />
       </bufferGeometry>
       <pointsMaterial
         size={0.015}

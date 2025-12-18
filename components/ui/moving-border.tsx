@@ -11,6 +11,18 @@ import {
 import { useRef } from "react"
 import { cn } from "@/lib/utils"
 
+interface MovingBorderProps {
+  children: React.ReactNode
+  duration?: number
+  rx?: string
+  ry?: string
+  className?: string
+  containerClassName?: string
+  borderClassName?: string
+  as?: "div" | "button" | "a" | "span"
+  [key: string]: unknown
+}
+
 export function MovingBorder({
   children,
   duration = 2000,
@@ -19,27 +31,11 @@ export function MovingBorder({
   className,
   containerClassName,
   borderClassName,
-  as: Component = "div",
+  as = "div",
   ...otherProps
-}: {
-  children: React.ReactNode
-  duration?: number
-  rx?: string
-  ry?: string
-  className?: string
-  containerClassName?: string
-  borderClassName?: string
-  as?: React.ElementType
-  [key: string]: unknown
-}) {
-  return (
-    <Component
-      className={cn(
-        "bg-transparent relative text-xl p-[1px] overflow-hidden",
-        containerClassName
-      )}
-      {...otherProps}
-    >
+}: MovingBorderProps) {
+  const content = (
+    <>
       <div
         className="absolute inset-0"
         style={{ borderRadius: `calc(${rx} * 0.96) calc(${ry} * 0.96)` }}
@@ -63,7 +59,42 @@ export function MovingBorder({
       >
         {children}
       </div>
-    </Component>
+    </>
+  )
+
+  const wrapperClassName = cn(
+    "bg-transparent relative text-xl p-[1px] overflow-hidden",
+    containerClassName
+  )
+
+  if (as === "button") {
+    return (
+      <button className={wrapperClassName} {...(otherProps as React.ButtonHTMLAttributes<HTMLButtonElement>)}>
+        {content}
+      </button>
+    )
+  }
+
+  if (as === "a") {
+    return (
+      <a className={wrapperClassName} {...(otherProps as React.AnchorHTMLAttributes<HTMLAnchorElement>)}>
+        {content}
+      </a>
+    )
+  }
+
+  if (as === "span") {
+    return (
+      <span className={wrapperClassName} {...(otherProps as React.HTMLAttributes<HTMLSpanElement>)}>
+        {content}
+      </span>
+    )
+  }
+
+  return (
+    <div className={wrapperClassName} {...(otherProps as React.HTMLAttributes<HTMLDivElement>)}>
+      {content}
+    </div>
   )
 }
 
