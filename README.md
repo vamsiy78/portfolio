@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Y Naga Vamsi | Portfolio
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 15, featuring premium UI effects and animations.
 
-First, run the development server:
+![Portfolio Preview](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8?style=flat-square&logo=tailwindcss)
+
+## ✨ Features
+
+- **Interactive 3D Globe** - Animated globe with connection arcs using Three.js
+- **MacBook Scroll Animation** - Scroll-triggered laptop opening effect for featured projects
+- **Bento Grid Layout** - Modern grid design for project showcases
+- **Smooth Animations** - Framer Motion powered transitions and effects
+- **Responsive Design** - Optimized for all devices (mobile, tablet, desktop)
+- **Dark Theme** - Sleek dark mode with glassmorphism effects
+- **Floating Navigation** - macOS-style dock navigation
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **3D Graphics:** Three.js, React Three Fiber
+- **Icons:** Lucide React
+- **UI Components:** Custom Aceternity-inspired components
+
+## 🚀 Getting Started
 
 ```bash
+# Clone the repository
+git clone https://github.com/vamsiy78/portfolio.git
+
+# Navigate to directory
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/                  # Next.js app router
+├── components/
+│   ├── layout/          # Navigation, Footer, FloatingNav
+│   ├── sections/        # Hero, About, Skills, Experience, Projects, Contact
+│   └── ui/              # Reusable UI components (Globe, MacbookScroll, etc.)
+├── data/                # Static data files
+├── lib/                 # Utility functions
+└── public/              # Static assets
+```
 
-## Learn More
+## 📱 Sections
 
-To learn more about Next.js, take a look at the following resources:
+- **Hero** - Introduction with animated text and 3D globe
+- **About** - Overview and expertise areas
+- **Skills** - Infinite scrolling tech stack display
+- **Experience** - Professional timeline
+- **Projects** - Featured work with MacBook animation + project grid
+- **Certifications** - Education and certificates
+- **Contact** - Contact information and social links
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 UI Components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Custom components inspired by Aceternity UI:
+- Spotlight Effect
+- Sparkles Background
+- Flip Words Animation
+- Infinite Moving Cards
+- MacBook Scroll
+- Floating Dock
+- Background Grid
 
-## Deploy on Vercel
+## 📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MIT License - feel free to use this for your own portfolio!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👤 Author
+
+**Y Naga Vamsi**
+- LinkedIn: [y-naga-vamsi](https://linkedin.com/in/y-naga-vamsi)
+- GitHub: [vamsiy78](https://github.com/vamsiy78)
+- Email: yadavallinagavamsi@gmail.com
